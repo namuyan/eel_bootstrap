@@ -56,7 +56,7 @@ async def loop_comment():
 
 async def main():
     async_eel.init('web')
-    await async_eel.start('index.html')
+    await async_eel.start('index.html', mode='edge')
     async_eel.spawn(callback_example)
     async_eel.spawn(loop_comment)
     log.info("success start app")

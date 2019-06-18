@@ -1,4 +1,4 @@
-var app = new Vue({
+let app = new Vue({
   el: '#app',
   mounted () {
     eel.return_hello()((message) => {
@@ -8,7 +8,12 @@ var app = new Vue({
   methods: {
     openDialog () {
       eel.open_dialog()((path) => {
-        this.message = path
+        this.message = path;
+      })
+    },
+    niceMeetYou () {
+      eel.nice_meet_you()((message) => {
+        this.message = message;
       })
     }
   },
