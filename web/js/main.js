@@ -16,3 +16,8 @@ var app = new Vue({
     message: ''
   }
 })
+
+eel.expose(my_rand);
+function my_rand() {
+  return "R:"+app.message;
+}
